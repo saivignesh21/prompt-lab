@@ -19,7 +19,9 @@ Prompt Lab turns one rough idea into three structured prompts:
 - **Human lens** focuses on user needs, emotions, and adoption.
 - **Maker lens** creates a small, testable next step.
 
-The repository currently holds the source code rather than a hosted public website. A shareable live link can be added by deploying it to GitHub Pages or another hosting service.
+### Live site
+
+Try it here: **[saivignesh21.github.io/prompt-lab](https://saivignesh21.github.io/prompt-lab/)**
 
 ## Why it exists
 
