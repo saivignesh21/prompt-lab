@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1020" />
+    <title>Prompt Lab — AI Strategy Playground</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="brand" href="#top">prompt <i>lab</i><span>⌁</span></a>
+        <p>Turn an ambiguous brief into a clear AI-ready strategy.</p>
+        <button id="surprise" class="ghost">Surprise me</button>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="eyebrow">01 / THE BRIEF</div>
+        <h1>Give the machine<br /><em>something worth solving.</em></h1>
+        <label for="brief">What are you trying to make or decide?</label>
+        <textarea id="brief" maxlength="600" placeholder="e.g. I need a practical plan to reduce support-ticket volume without making customers feel dismissed."></textarea>
+        <div class="controls">
+          <div class="chips" aria-label="Choose a goal">
+            <button class="chip active" data-goal="Create">Create</button>
+            <button class="chip" data-goal="Decide">Decide</button>
+            <button class="chip" data-goal="Explain">Explain</button>
+            <button class="chip" data-goal="Plan">Plan</button>
+          </div>
+          <button id="run" class="run">Generate strategy <span>→</span></button>
+        </div>
+      </section>
+
+      <section id="results" class="results hidden" aria-live="polite">
+        <div class="result-intro">
+          <div class="eyebrow">02 / THREE WAYS IN</div>
+          <h2>Same problem.<br /><em>Different kinds of intelligence.</em></h2>
+          <p>Choose the lens that feels most useful, then copy its ready-to-use prompt.</p>
+        </div>
+        <div class="cards" id="cards"></div>
+      </section>
+
+      <section class="principles">
+        <div class="eyebrow">03 / GOOD INPUTS, BETTER OUTPUTS</div>
+        <div class="principle-grid">
+          <article><b>01</b><h3>Name the stakes</h3><p>Tell the model what a good answer changes—not just what it contains.</p></article>
+          <article><b>02</b><h3>Invite constraints</h3><p>Limits create useful tradeoffs. Include what cannot change.</p></article>
+          <article><b>03</b><h3>Ask for a shape</h3><p>Request a decision tree, table, critique, or plan—not “ideas.”</p></article>
+        </div>
+      </section>
+    </main>
+    <footer>Prompt Lab is a client-side, AI-inspired prompt workshop. Nothing you type leaves this page.</footer>
+    <template id="card-template">
+      <article class="strategy-card">
+        <div class="card-top"><span class="number"></span><span class="lens"></span></div>
+        <h3></h3>
+        <p class="why"></p>
+        <div class="prompt"></div>
+        <button class="copy">Copy prompt <span>↗</span></button>
+      </article>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>
